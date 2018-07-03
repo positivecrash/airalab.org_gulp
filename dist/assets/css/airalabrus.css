@@ -299,7 +299,7 @@ header[role='banner'] a {
 #header-logo {
   width: 232px;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   #header-logo {
     width: 180px;
   }
@@ -478,7 +478,7 @@ a.btn-green[disabled], a.btn-green[disabled]:hover, input.btn-green[disabled], i
 }
 
 /*======== OTHER =========*/
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 501px) {
   .form-inline {
     display: inline-block;
     background-color: #ccc;
@@ -498,9 +498,12 @@ a.btn-green[disabled], a.btn-green[disabled]:hover, input.btn-green[disabled], i
     width: 50%;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .form-inline input {
+    display: block;
     max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -516,7 +519,7 @@ a.btn-green[disabled], a.btn-green[disabled]:hover, input.btn-green[disabled], i
   right: -40px;
   top: 10px;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .form-inline__ok:after {
     right: 0;
   }
@@ -528,6 +531,7 @@ a.btn-green[disabled], a.btn-green[disabled]:hover, input.btn-green[disabled], i
 .page-index {
   background-color: #03A5ED;
   color: #fff;
+  min-height: 850px;
   background-image: url('../i/pattern-dots-blue.png?1530043714');
   background-repeat: repeat;
   position: relative;

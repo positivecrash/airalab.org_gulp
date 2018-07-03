@@ -8,7 +8,7 @@
 
 @mixin minMobile 
 {
-	@media screen and (min-width: $mq-mobile) 
+	@media screen and (min-width: $mq-mobile + 1) 
 	{
 		@content;
 	}
