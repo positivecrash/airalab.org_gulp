@@ -129,6 +129,10 @@ a.btn-green, input.btn-green, button.btn-green{
 		    	width: 50%;
 		  	}
 	  	}
+
+	  	@include mobile(){
+	  		input { max-width: 200px; }
+	  	}
 	}
 
 
@@ -147,5 +151,9 @@ a.btn-green, input.btn-green, button.btn-green{
 			@include mobile(){
 				right: 0;
 			}
+		}
+
+		input[type="submit"] {
+			pointer-events: none;
 		}
 	}
