@@ -97,6 +97,13 @@ a.btn-green, input.btn-green, button.btn-green{
 	@include btn_col($c-green);
 }
 
+a.btn-yellow, input.btn-yellow, button.btn-yellow{
+	@extend %form_e_base;
+	@extend %form_b_base;
+
+	@include btn_col(#FBDC56, $c-text);
+}
+
 
 
 
@@ -155,4 +162,73 @@ a.btn-green, input.btn-green, button.btn-green{
 				right: 0;
 			}
 		}
+	}
+
+
+.inp-paysum
+	{
+		position: relative;
+		display: inline-block;
+		font-size: 20px;
+		line-height: 1;
+
+		input
+			{
+				background-color: $c-gray-light;
+				border: 1px solid $c-gray;
+				max-width: 170px;
+				padding-right: 50px;
+				box-sizing: border-box;
+
+				font-size: 20px;
+				line-height: 1;
+				font-weight: bold;
+			}
+
+		&:after{
+			content:'₽';
+			position: absolute;
+			right: 22px;
+			top: 13px;
+		}
+	}
+
+
+.btn-iconed
+	{
+		position: relative;
+		display: inline-block;
+		margin-bottom: $inp-margin-b;
+
+		.btn-iconed--icon
+			{
+				position: absolute;
+				left: $inp-padding-g;
+				top: 50%;
+				pointer-events: none;
+			}
+
+		.btn
+			{
+				margin-bottom: 0;
+			}
+	}
+
+
+.btn-iconed--pay
+	{
+		$sprite-creditCard: map-get($icons, 'credit-card');
+
+
+		.btn-iconed--icon
+			{
+				left: $inp-padding-g*2;
+				margin-top: - map-get($sprite-creditCard, height)/2;
+			}
+
+		.btn
+			{
+				padding-left: map-get($sprite-creditCard, width) + $inp-padding-g*2.5;
+				padding-right: $inp-padding-g*2;
+			}
 	}

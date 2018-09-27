@@ -3,18 +3,17 @@ footer[role='contentinfo']
     background-color: $c-dark-green;
     &, a { color: #fff; }
 
+    padding: 20px 0;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 10;
 
-    padding: 20px 0;
-
 
     .form-inline
       {
-        max-width: 457px;
+        max-width: 412px;
       }
 
      @include maxTablet()

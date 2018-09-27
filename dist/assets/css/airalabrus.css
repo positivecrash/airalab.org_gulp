@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +42,7 @@ input, select {
   margin: 0 auto;
 }
 
-.sprite-basic-check, .sprite-basic-hamburger, .sprite-basic-hamburger-close, #header-logo, input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green {
+.sprite-basic-check, .sprite-basic-credit-card, .sprite-basic-hamburger, .sprite-basic-hamburger-close, #header-logo, input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green, a.btn-yellow, input.btn-yellow, button.btn-yellow {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -55,21 +56,21 @@ input, select {
   *zoom: 1;
 }
 
-header[role='banner'] a, input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green, header[role='banner'] a:hover, input[type='submit']:hover, button:hover, a.btn-red:hover, input.btn-red:hover, a.btn-blue:hover, input.btn-blue:hover, a.btn-green:hover, input.btn-green:hover, header[role='banner'] a:focus, input[type='submit']:focus, button:focus, a.btn-red:focus, input.btn-red:focus, a.btn-blue:focus, input.btn-blue:focus, a.btn-green:focus, input.btn-green:focus, header[role='banner'] a:visited, input[type='submit']:visited, button:visited, a.btn-red:visited, input.btn-red:visited, a.btn-blue:visited, input.btn-blue:visited, a.btn-green:visited, input.btn-green:visited {
+header[role='banner'] a, input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green, a.btn-yellow, input.btn-yellow, button.btn-yellow, header[role='banner'] a:hover, input[type='submit']:hover, button:hover, a.btn-red:hover, input.btn-red:hover, a.btn-blue:hover, input.btn-blue:hover, a.btn-green:hover, input.btn-green:hover, a.btn-yellow:hover, input.btn-yellow:hover, header[role='banner'] a:focus, input[type='submit']:focus, button:focus, a.btn-red:focus, input.btn-red:focus, a.btn-blue:focus, input.btn-blue:focus, a.btn-green:focus, input.btn-green:focus, a.btn-yellow:focus, input.btn-yellow:focus, header[role='banner'] a:visited, input[type='submit']:visited, button:visited, a.btn-red:visited, input.btn-red:visited, a.btn-blue:visited, input.btn-blue:visited, a.btn-green:visited, input.btn-green:visited, a.btn-yellow:visited, input.btn-yellow:visited {
   text-decoration: none;
   text-decoration: none !important;
 }
 
-#header-logo img {
+.i-block, #header-logo img {
   display: block;
   max-width: 100%;
   max-height: 100%;
 }
 
 /* EXTENDS */
-input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green, body {
+input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green, a.btn-yellow, input.btn-yellow, button.btn-yellow, body {
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.5;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   word-spacing: normal;
   letter-spacing: 0;
@@ -93,6 +94,7 @@ h5 {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
   margin-top: 38.4px;
   margin-bottom: 19.2px;
   text-align: center;
@@ -103,6 +105,7 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
 
 h1 {
   font-size: 40px;
+  margin-bottom: 38.4px;
 }
 
 a {
@@ -127,6 +130,10 @@ li, p, blockquote {
 }
 li:last-child, p:last-child, blockquote:last-child {
   margin-bottom: 0;
+}
+
+hr {
+  margin: 19.2px 0;
 }
 
 .t-color-red {
@@ -156,6 +163,14 @@ li:last-child, p:last-child, blockquote:last-child {
 
 .t-align-left {
   text-align: left;
+}
+
+.t-paragraph-hyphened {
+  text-align: justify;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 @-webkit-keyframes fadeIn {
@@ -191,11 +206,11 @@ li:last-child, p:last-child, blockquote:last-child {
     opacity: 0;
   }
 }
-.svg .sprite-basic-check, .svg .sprite-basic-hamburger, .svg .sprite-basic-hamburger-close, .svg .form-inline__ok:after {
+.svg .sprite-basic-check, .svg .sprite-basic-credit-card, .svg .sprite-basic-hamburger, .svg .sprite-basic-hamburger-close, .svg .form-inline__ok:after {
   background-image: url("../i/sprite.svg?9");
 }
 
-.sprite-basic-check, .sprite-basic-hamburger, .sprite-basic-hamburger-close, .form-inline__ok:after {
+.sprite-basic-check, .sprite-basic-credit-card, .sprite-basic-hamburger, .sprite-basic-hamburger-close, .form-inline__ok:after {
   background-image: url("../i/sprite.png?9");
 }
 
@@ -205,16 +220,22 @@ li:last-child, p:last-child, blockquote:last-child {
   background-position: 0px 0px;
 }
 
+.sprite-basic-credit-card {
+  width: 25.18px;
+  height: 20.14px;
+  background-position: -29px 0px;
+}
+
 .sprite-basic-hamburger {
   width: 40px;
   height: 40px;
-  background-position: -29px 0px;
+  background-position: -55px 0px;
 }
 
 .sprite-basic-hamburger-close {
   width: 40px;
   height: 40px;
-  background-position: -69px 0px;
+  background-position: -95px 0px;
 }
 
 .svg .sprite-browsers-chrome, .svg .sprite-browsers-chrome_hover, .svg .sprite-browsers-firefox, .svg .sprite-browsers-firefox_hover, .svg .sprite-browsers-opera, .svg .sprite-browsers-opera_hover, .svg .sprite-browsers-chrome:hover, .svg .sprite-browsers-firefox:hover, .svg .sprite-browsers-opera:hover {
@@ -368,18 +389,18 @@ header[role='banner'] a {
 }
 footer[role='contentinfo'] {
   background-color: #2C4C4B;
+  padding: 20px 0;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 10;
-  padding: 20px 0;
 }
 footer[role='contentinfo'], footer[role='contentinfo'] a {
   color: #fff;
 }
 footer[role='contentinfo'] .form-inline {
-  max-width: 457px;
+  max-width: 412px;
 }
 @media screen and (max-width: 750px) {
   footer[role='contentinfo'] .footer-row .d-t_cell {
@@ -390,7 +411,7 @@ footer[role='contentinfo'] .form-inline {
 }
 
 /*======== FORMS VARIABLES & MIXINS & EXTENDS =========*/
-input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green {
+input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green, a.btn-yellow, input.btn-yellow, button.btn-yellow {
   background-color: #ccc;
   border-radius: 20px;
   border: 0;
@@ -398,12 +419,12 @@ input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-r
   padding: 10px 20px;
   margin-bottom: 13.44px;
 }
-input[disabled]:not([type='submit']), input[disabled][type='submit'], button[disabled], a[disabled].btn-red, input[disabled].btn-red, a[disabled].btn-blue, input[disabled].btn-blue, a[disabled].btn-green, input[disabled].btn-green {
+input[disabled]:not([type='submit']), input[disabled][type='submit'], button[disabled], a[disabled].btn-red, input[disabled].btn-red, a[disabled].btn-blue, input[disabled].btn-blue, a[disabled].btn-green, input[disabled].btn-green, a[disabled].btn-yellow, input[disabled].btn-yellow {
   cursor: default;
   opacity: 0.8;
 }
 
-input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green {
+input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green, a.btn-yellow, input.btn-yellow, button.btn-yellow {
   text-align: center;
   font-weight: 700;
   -webkit-appearance: none;
@@ -465,6 +486,17 @@ a.btn-green[disabled], input.btn-green[disabled], button.btn-green[disabled] {
   background-color: #3C9E1A;
 }
 
+a.btn-yellow, input.btn-yellow, button.btn-yellow {
+  background-color: #FBDC56;
+  color: #333;
+}
+a.btn-yellow:hover, input.btn-yellow:hover, button.btn-yellow:hover {
+  background-color: #fad73d;
+}
+a.btn-yellow[disabled], input.btn-yellow[disabled], button.btn-yellow[disabled] {
+  background-color: #FBDC56;
+}
+
 /*======== OTHER =========*/
 @media screen and (min-width: 501px) {
   .form-inline {
@@ -511,6 +543,53 @@ a.btn-green[disabled], input.btn-green[disabled], button.btn-green[disabled] {
   .form-inline__ok:after {
     right: 0;
   }
+}
+
+.inp-paysum {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 1;
+}
+.inp-paysum input {
+  background-color: #F4F4F4;
+  border: 1px solid #ccc;
+  max-width: 170px;
+  padding-right: 50px;
+  box-sizing: border-box;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: bold;
+}
+.inp-paysum:after {
+  content: '₽';
+  position: absolute;
+  right: 22px;
+  top: 13px;
+}
+
+.btn-iconed {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 13.44px;
+}
+.btn-iconed .btn-iconed--icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  pointer-events: none;
+}
+.btn-iconed .btn {
+  margin-bottom: 0;
+}
+
+.btn-iconed--pay .btn-iconed--icon {
+  left: 40px;
+  margin-top: -10.07px;
+}
+.btn-iconed--pay .btn {
+  padding-left: 75.18px;
+  padding-right: 40px;
 }
 
 .page-index {
@@ -589,6 +668,23 @@ a.btn-green[disabled], input.btn-green[disabled], button.btn-green[disabled] {
     left: 241px;
   }
 }
+.page-inside {
+  height: auto;
+}
+.page-inside main[role="main"] {
+  padding-top: 80px;
+  padding-bottom: 220px;
+}
+@media screen and (max-width: 750px) {
+  .page-inside main[role="main"] {
+    padding-bottom: 300px;
+  }
+}
+
+.i-payment-methods {
+  width: 120px;
+}
+
 @-ms-viewport {
   width: device-width;
 }
@@ -3085,7 +3181,7 @@ body {
 /* END OF FOR MODERN BROWSERS*/
 /* DISPLAY */
 .w-text {
-  max-width: 740px;
+  max-width: 660px;
 }
 
 .w-paddings {
@@ -3134,6 +3230,11 @@ body {
 section {
   margin-top: 76.8px;
   margin-bottom: 76.8px;
+}
+
+.sec-bordered {
+  border: 1px solid #ccc;
+  padding: 38.4px;
 }
 
 /* END OF DISPLAY */

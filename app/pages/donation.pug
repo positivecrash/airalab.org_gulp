@@ -1,0 +1,28 @@
+extends extends/layout.pug
+
+block html
+	- var bodyclass = 'page-inside'
+
+block head
+	- var pageTitle = 'Поддержка наших проектов'
+
+block content
+	main(role="main")
+		.w-text
+			h1 Поддержка наших проектов
+			p: img.i-block(alt="", src="assets/i/banner-website-donation.jpg")
+			p.t-paragraph-hyphened При работе над проектами мы используем большое количество времени высококвалифицированных инженеров, деньги на сопутствующее оборудование, интернет и кофе. Если вам нравятся наши проекты, станьте нашим другом и пожертвуйте любую сумму на наше развитие.
+			.sec-bordered.t-align-center
+				p: b Разовая поддержка любой суммой от 100 руб.
+				.inp-paysum: input(type="text", value="")
+				br/
+				.btn-iconed.btn-iconed--pay
+					span.btn-iconed--icon.sprite-basic-credit-card
+					input.btn.btn-yellow(type="submit", value="Поддержать")
+				br/
+				img.i-payment-methods(alt="", src="assets/i/payment-methods.png", srcset="assets/i/payment-methods@2x.png")
+
+				hr/
+
+				p: b Ежемесячная поддержка
+				a.btn-blue(href="", target="_blank") Стать патроном на PATREON

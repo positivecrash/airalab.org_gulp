@@ -1,8 +1,9 @@
 $icons: (
-    sprite: (width: 109px, height: 40px, pngPath: '../i/sprite.png?9', svgPath: '../i/sprite.svg?9'),
+    sprite: (width: 135px, height: 40px, pngPath: '../i/sprite.png?9', svgPath: '../i/sprite.svg?9'),
     check: (width: 28.36px, height: 16.31px, backgroundX: 0px, backgroundY: 0px),
-    hamburger: (width: 40px, height: 40px, backgroundX: -29px, backgroundY: 0px),
-    hamburger-close: (width: 40px, height: 40px, backgroundX: -69px, backgroundY: 0px),
+    credit-card: (width: 25.18px, height: 20.14px, backgroundX: -29px, backgroundY: 0px),
+    hamburger: (width: 40px, height: 40px, backgroundX: -55px, backgroundY: 0px),
+    hamburger-close: (width: 40px, height: 40px, backgroundX: -95px, backgroundY: 0px),
 );
 
 $sprite: map-get($icons, sprite);
@@ -23,6 +24,10 @@ $sprite: map-get($icons, sprite);
 
 .sprite-basic-check{
   @include get-sprite('check');
+  @extend %inline-block;
+}
+.sprite-basic-credit-card{
+  @include get-sprite('credit-card');
   @extend %inline-block;
 }
 .sprite-basic-hamburger{

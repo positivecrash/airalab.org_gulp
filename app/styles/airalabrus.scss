@@ -21,6 +21,7 @@
 @import "sections/forms";
 
 @import "pages/index";
+@import "pages/inside";
 
 @import "plugins/bootstrap/bootstrap-grid";
 @import "plugins/bxslider";
@@ -115,6 +116,10 @@ section
     margin-bottom: $vertical-rythm*4;
   }
 
+.sec-bordered{
+  border: 1px solid $c-gray;
+  padding: $vertical-rythm*2;
+}
 /* END OF DISPLAY */
 
 

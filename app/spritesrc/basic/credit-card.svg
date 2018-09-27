@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.176 20.141">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #333;
+      }
+    </style>
+  </defs>
+  <g id="credit-card" transform="translate(0 -54.821)">
+    <g id="Group_1726" data-name="Group 1726" transform="translate(0 54.821)">
+      <path id="Path_2061" data-name="Path 2061" class="cls-1" d="M24.56,55.437a2.02,2.02,0,0,0-1.482-.616H2.1a2.021,2.021,0,0,0-1.482.616A2.02,2.02,0,0,0,0,56.919V72.863a2.02,2.02,0,0,0,.616,1.482,2.021,2.021,0,0,0,1.482.616h20.98a2.1,2.1,0,0,0,2.1-2.1V56.919A2.02,2.02,0,0,0,24.56,55.437ZM23.5,72.864a.425.425,0,0,1-.419.419H2.1a.425.425,0,0,1-.42-.42V64.891H23.5v7.972Zm0-13.008H1.678V56.919A.425.425,0,0,1,2.1,56.5h20.98a.425.425,0,0,1,.419.419v2.937Z" transform="translate(0 -54.821)"/>
+      <rect id="Rectangle_1329" data-name="Rectangle 1329" class="cls-1" width="3.357" height="1.679" transform="translate(3.357 15.105)"/>
+      <rect id="Rectangle_1330" data-name="Rectangle 1330" class="cls-1" width="5.035" height="1.679" transform="translate(8.392 15.105)"/>
+    </g>
+  </g>
+</svg>

@@ -2,7 +2,7 @@
 %font_base
 	{
 		font-size: $font-size-basic;
-		line-height: 1.2;
+		line-height: 1.5;
 		font-family: $font-family-base;
 		word-spacing: normal;
 		letter-spacing: 0;
@@ -23,6 +23,7 @@
 
 #{headings()}
 	{
+		line-height: 1.2;
 		margin-top: $vertical-rythm*2;
 		margin-bottom: $vertical-rythm;
 		text-align: center;
@@ -37,6 +38,7 @@
 h1
 	{
 		font-size: $font-size-title;
+		margin-bottom: $vertical-rythm*2;
 	}
 
 
@@ -67,6 +69,11 @@ li, p, blockquote
 	  &:last-child{
 	  	margin-bottom: 0;
 	  }
+	}
+
+hr
+	{
+		margin: $vertical-rythm 0;
 	}
 
 
@@ -109,7 +116,11 @@ li, p, blockquote
 // }
 
 
-// .t-paragraph-hyphened {
-// 	text-align: justify;
-// 	hyphens: auto;
-// }
+.t-paragraph-hyphened {
+	text-align: justify;
+	hyphens: auto;
+}
+
+.i-block{
+	@extend %i_block;
+}
