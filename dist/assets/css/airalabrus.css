@@ -134,6 +134,32 @@ li:last-child, p:last-child, blockquote:last-child {
 
 hr {
   margin: 19.2px 0;
+  border: 0;
+}
+
+.hr-titled {
+  margin: 19.2px 0;
+  position: relative;
+  color: #7C7B7B;
+  text-align: center;
+}
+.hr-titled hr {
+  margin: 0;
+  height: 1px;
+  background-color: #ccc;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -0.5px;
+  z-index: 0;
+}
+.hr-titled span {
+  display: inline-block;
+  background-color: #fff;
+  padding: 5px 10px;
+  position: relative;
+  z-index: 1;
 }
 
 .t-color-red {

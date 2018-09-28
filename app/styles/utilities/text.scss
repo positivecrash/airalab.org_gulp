@@ -74,6 +74,38 @@ li, p, blockquote
 hr
 	{
 		margin: $vertical-rythm 0;
+		border: 0;
+	}
+
+.hr-titled
+	{
+		margin: $vertical-rythm 0;
+		position: relative;
+		color: $c-gray-dark;
+		text-align: center;
+
+		hr{
+			margin: 0;
+			height: 1px;
+			background-color: $c-gray;
+
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			margin-top: -0.5px;
+			z-index: 0;
+		}
+
+		span
+			{
+				display: inline-block;
+				background-color: #fff;
+				padding: 5px 10px;
+
+				position: relative;
+				z-index: 1;
+			}
 	}
 
 

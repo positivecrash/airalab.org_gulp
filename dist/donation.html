@@ -38,16 +38,36 @@
         <div class="sec-bordered t-align-center">
           <p><b>Разовая поддержка любой суммой от 100 руб.</b></p>
           <div class="inp-paysum">
-            <input type="text" value="">
+            <input id="sum" type="text" value="">
           </div><br/>
           <div class="btn-iconed btn-iconed--pay"><span class="btn-iconed--icon sprite-basic-credit-card"></span>
             <input class="btn btn-yellow" type="submit" value="Поддержать">
           </div><br/><img class="i-payment-methods" alt="" src="assets/i/payment-methods.png" srcset="assets/i/payment-methods@2x.png">
-          <hr/>
+          <div class="hr-titled"><span>или</span>
+            <hr/>
+          </div>
           <p><b>Ежемесячная поддержка</b></p><a class="btn-blue" href="" target="_blank">Стать патроном на PATREON</a>
         </div>
       </div>
     </main>
+    <script>
+      sum.onblur = function() {
+      	if (isNaN(this.value)) {
+      		this.classList.add("error");
+      		sum.focus();
+      	} else {
+      		this.classList.remove("error");
+      	}
+      
+      	console.log(isNaN(this.value));
+      };
+      
+      //- var sum = document.getElementById('sum');
+      
+      //- sum.addEventListener("blur", function() {
+      //- 	console.log('isNaN');
+      //- }, true);
+    </script>
     <footer role="contentinfo">
       <div class="w-base">
         <div class="footer-row d-t w-full">

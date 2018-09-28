@@ -14,7 +14,7 @@ block content
 			p.t-paragraph-hyphened При работе над проектами мы используем большое количество времени высококвалифицированных инженеров, деньги на сопутствующее оборудование, интернет и кофе. Если вам нравятся наши проекты, станьте нашим другом и пожертвуйте любую сумму на наше развитие.
 			.sec-bordered.t-align-center
 				p: b Разовая поддержка любой суммой от 100 руб.
-				.inp-paysum: input(type="text", value="")
+				.inp-paysum: input#sum(type="text", value="")
 				br/
 				.btn-iconed.btn-iconed--pay
 					span.btn-iconed--icon.sprite-basic-credit-card
@@ -22,7 +22,27 @@ block content
 				br/
 				img.i-payment-methods(alt="", src="assets/i/payment-methods.png", srcset="assets/i/payment-methods@2x.png")
 
-				hr/
+				.hr-titled
+					span или
+					hr/
 
 				p: b Ежемесячная поддержка
 				a.btn-blue(href="", target="_blank") Стать патроном на PATREON
+
+	script.
+		sum.onblur = function() {
+			if (isNaN(this.value)) {
+				this.classList.add("error");
+				sum.focus();
+			} else {
+				this.classList.remove("error");
+			}
+
+			console.log(isNaN(this.value));
+		};
+
+		//- var sum = document.getElementById('sum');
+
+		//- sum.addEventListener("blur", function() {
+		//- 	console.log('isNaN');
+		//- }, true);
