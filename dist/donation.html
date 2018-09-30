@@ -37,12 +37,14 @@
         <p class="t-paragraph-hyphened">При работе над проектами мы используем большое количество времени высококвалифицированных инженеров, деньги на сопутствующее оборудование, интернет и кофе. Если вам нравятся наши проекты, станьте нашим другом и пожертвуйте любую сумму на наше развитие.</p>
         <div class="sec-bordered t-align-center">
           <p><b>Разовая поддержка любой суммой от 100 руб.</b></p>
-          <div class="inp-paysum">
-            <input id="sum" type="text" value="">
-          </div><br/>
-          <div class="btn-iconed btn-iconed--pay"><span class="btn-iconed--icon sprite-basic-credit-card"></span>
-            <input class="btn btn-yellow" type="submit" value="Поддержать">
-          </div><br/><img class="i-payment-methods" alt="" src="assets/i/payment-methods.png" srcset="assets/i/payment-methods@2x.png">
+          <form>
+            <div class="inp-paysum" id="donation-sum">
+              <input id="sum" type="text" value="" placeholder="0.00" required>
+            </div><br/>
+            <div class="btn-iconed btn-iconed--pay"><span class="btn-iconed--icon sprite-basic-credit-card"></span>
+              <input class="btn btn-yellow" id="sum-submit" type="submit" value="Поддержать">
+            </div>
+          </form><br/><img class="i-payment-methods" alt="" src="assets/i/payment-methods.png" srcset="assets/i/payment-methods@2x.png">
           <div class="hr-titled"><span>или</span>
             <hr/>
           </div>
@@ -51,22 +53,46 @@
       </div>
     </main>
     <script>
-      sum.onblur = function() {
-      	if (isNaN(this.value)) {
-      		this.classList.add("error");
-      		sum.focus();
-      	} else {
-      		this.classList.remove("error");
-      	}
+      document.getElementById("sum-submit").disabled = true;
       
-      	console.log(isNaN(this.value));
+      function number_format( number ) {
+      	return parseFloat(number.replace(",", "."));
+      }
+      
+      function set_error(o){
+      	o.classList.add("error");
+      	document.getElementById("sum-submit").disabled = true;
+      	o.focus();
+      }
+      
+      function remove_error(o){
+      	o.classList.remove("error");
+      	document.getElementById("sum-submit").disabled = false;
+      	o.focus();
+      }
+      
+      function check_error(o){
+      	if( (parseFloat(o.value) < 99) || (/[a-zа-яё]/i.test(o.value)) )
+      		return true;
+      }
+      
+      sum.oninput = function() {
+      	
+      	if(!check_error(this)) {
+      		remove_error(this);
+      	}
+      	else{
+      		set_error(this);
+      	}
       };
       
-      //- var sum = document.getElementById('sum');
       
-      //- sum.addEventListener("blur", function() {
-      //- 	console.log('isNaN');
-      //- }, true);
+      sum.onblur = function() {
+      	if(!check_error(this)) {
+      		var result = number_format(this.value);
+      		this.value = result;
+      	}
+      };
     </script>
     <footer role="contentinfo">
       <div class="w-base">

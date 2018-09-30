@@ -14,11 +14,14 @@ block content
 			p.t-paragraph-hyphened При работе над проектами мы используем большое количество времени высококвалифицированных инженеров, деньги на сопутствующее оборудование, интернет и кофе. Если вам нравятся наши проекты, станьте нашим другом и пожертвуйте любую сумму на наше развитие.
 			.sec-bordered.t-align-center
 				p: b Разовая поддержка любой суммой от 100 руб.
-				.inp-paysum: input#sum(type="text", value="")
-				br/
-				.btn-iconed.btn-iconed--pay
-					span.btn-iconed--icon.sprite-basic-credit-card
-					input.btn.btn-yellow(type="submit", value="Поддержать")
+				form
+					#donation-sum.inp-paysum
+						input#sum(type="text", value="", placeholder="0.00", required)
+						//- #donation-sum-msg
+					br/
+					.btn-iconed.btn-iconed--pay
+						span.btn-iconed--icon.sprite-basic-credit-card
+						input.btn.btn-yellow#sum-submit(type="submit", value="Поддержать")
 				br/
 				img.i-payment-methods(alt="", src="assets/i/payment-methods.png", srcset="assets/i/payment-methods@2x.png")
 
@@ -30,19 +33,44 @@ block content
 				a.btn-blue(href="", target="_blank") Стать патроном на PATREON
 
 	script.
-		sum.onblur = function() {
-			if (isNaN(this.value)) {
-				this.classList.add("error");
-				sum.focus();
-			} else {
-				this.classList.remove("error");
-			}
+		document.getElementById("sum-submit").disabled = true;
 
-			console.log(isNaN(this.value));
+		function number_format( number ) {
+			return parseFloat(number.replace(",", "."));
+		}
+
+		function set_error(o){
+			o.classList.add("error");
+			document.getElementById("sum-submit").disabled = true;
+			o.focus();
+		}
+
+		function remove_error(o){
+			o.classList.remove("error");
+			document.getElementById("sum-submit").disabled = false;
+			o.focus();
+		}
+
+		function check_error(o){
+			if( (parseFloat(o.value) < 99) || (/[a-zа-яё]/i.test(o.value)) )
+				return true;
+		}
+
+		sum.oninput = function() {
+			
+			if(!check_error(this)) {
+				remove_error(this);
+			}
+			else{
+				set_error(this);
+			}
 		};
 
-		//- var sum = document.getElementById('sum');
 
-		//- sum.addEventListener("blur", function() {
-		//- 	console.log('isNaN');
-		//- }, true);
+		sum.onblur = function() {
+			if(!check_error(this)) {
+				var result = number_format(this.value);
+				this.value = result;
+			}
+		};
+

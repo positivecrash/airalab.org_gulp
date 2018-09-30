@@ -28,6 +28,7 @@ $color-disabled-button-background: darken($c-gray, 5%);
   	}
 }
 
+
 %form_b_base{
 	text-align: center;
 	@extend %link_noline;
@@ -165,6 +166,19 @@ a.btn-yellow, input.btn-yellow, button.btn-yellow{
 	}
 
 
+@keyframes Shake {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
 .inp-paysum
 	{
 		position: relative;
@@ -183,6 +197,11 @@ a.btn-yellow, input.btn-yellow, button.btn-yellow{
 				font-size: 20px;
 				line-height: 1;
 				font-weight: bold;
+
+				&.error{
+			  		border-color: $c-red;
+			  		animation: 0.2s ease-in-out Shake 2;
+			  	}
 			}
 
 		&:after{
@@ -231,4 +250,26 @@ a.btn-yellow, input.btn-yellow, button.btn-yellow{
 				padding-left: map-get($sprite-creditCard, width) + $inp-padding-g*2.5;
 				padding-right: $inp-padding-g*2;
 			}
+	}
+
+
+#donation-sum
+	{
+		margin-bottom: $inp-margin-b;
+	}
+
+
+input#sum
+	{
+		margin-bottom: 0;
+	}
+
+#donation-sum-msg
+	{
+		font-size: 12px;
+		line-height: 1.2;
+		text-align: center;
+		color: $c-red;
+		margin-top: $inp-margin-b/2;
+		max-width: 170px;
 	}

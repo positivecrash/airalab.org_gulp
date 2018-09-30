@@ -571,6 +571,35 @@ a.btn-yellow[disabled], input.btn-yellow[disabled], button.btn-yellow[disabled] 
   }
 }
 
+@-webkit-keyframes Shake {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes Shake {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
 .inp-paysum {
   position: relative;
   display: inline-block;
@@ -586,6 +615,11 @@ a.btn-yellow[disabled], input.btn-yellow[disabled], button.btn-yellow[disabled] 
   font-size: 20px;
   line-height: 1;
   font-weight: bold;
+}
+.inp-paysum input.error {
+  border-color: #F15A24;
+  -webkit-animation: 0.2s ease-in-out Shake 2;
+          animation: 0.2s ease-in-out Shake 2;
 }
 .inp-paysum:after {
   content: '₽';
@@ -616,6 +650,23 @@ a.btn-yellow[disabled], input.btn-yellow[disabled], button.btn-yellow[disabled] 
 .btn-iconed--pay .btn {
   padding-left: 75.18px;
   padding-right: 40px;
+}
+
+#donation-sum {
+  margin-bottom: 13.44px;
+}
+
+input#sum {
+  margin-bottom: 0;
+}
+
+#donation-sum-msg {
+  font-size: 12px;
+  line-height: 1.2;
+  text-align: center;
+  color: #F15A24;
+  margin-top: 6.72px;
+  max-width: 170px;
 }
 
 .page-index {
