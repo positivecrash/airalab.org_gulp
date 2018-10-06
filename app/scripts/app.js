@@ -5,7 +5,6 @@ jQuery(document).ready(function($){
 	var $d = $(document);
 	var $page = $('body');
 
-
 	$('#header-nav-toggler').on('click', function(){
 		var $this = $(this);
 		var cToggl = 'active';

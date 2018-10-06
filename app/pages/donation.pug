@@ -52,7 +52,7 @@ block content
 		}
 
 		function check_error(o){
-			if( (parseFloat(o.value) < 99) || (/[a-zа-яё]/i.test(o.value)) )
+			if( (parseFloat(o.value) < 99) || (/[a-zа-яё]/i.test(o.value)) || o.value=='')
 				return true;
 		}
 

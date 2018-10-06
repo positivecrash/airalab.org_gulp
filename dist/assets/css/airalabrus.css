@@ -233,11 +233,11 @@ hr {
   }
 }
 .svg .sprite-basic-check, .svg .sprite-basic-credit-card, .svg .sprite-basic-hamburger, .svg .sprite-basic-hamburger-close, .svg .form-inline__ok:after {
-  background-image: url("../i/sprite.svg?9");
+  background-image: url("../i/sprite.svg?11");
 }
 
 .sprite-basic-check, .sprite-basic-credit-card, .sprite-basic-hamburger, .sprite-basic-hamburger-close, .form-inline__ok:after {
-  background-image: url("../i/sprite.png?9");
+  background-image: url("../i/sprite.png?11");
 }
 
 .sprite-basic-check {
